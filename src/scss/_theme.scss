@@ -1,0 +1,19 @@
+
+@use 'color-palette' as pal;
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$people-app-primary: mat.define-palette(pal.$primary-palette);
+$people-app-accent: mat.define-palette(pal.$accent-palette);
+$people-app-warn: mat.define-palette(mat.$red-palette);
+
+$people-app-theme: mat.define-light-theme((
+  color: (
+    primary: $people-app-primary,
+    accent: $people-app-accent,
+    warn: $people-app-warn,
+  )
+));
+
+@include mat.all-component-themes($people-app-theme);
