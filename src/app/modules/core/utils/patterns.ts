@@ -1,0 +1,1 @@
+export const PATTERN_NOT_SPACES_START: RegExp = /^[^\s]/;
