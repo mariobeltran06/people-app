@@ -61,7 +61,7 @@
   <mat-paginator [pageSizeOptions]="[5, 10, 15]"></mat-paginator>
 </div>
 <div class="section-responsive">
-  <div class="card-content" *ngFor="let person of listPeople; let i = index">
+  <div class="card-content" *ngFor="let person of listPeople">
     <h4 class="caption">Nombre</h4>
     <p class="text">{{ person.name }}</p>
     <h4 class="caption">Apellido</h4>

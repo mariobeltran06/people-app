@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, ViewChild } from '@angular/core';
-import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {
@@ -22,8 +21,7 @@ import { Person } from '../../interfaces/person.interface';
     MatFormFieldModule,
     MatInputModule,
     MatSortModule,
-    MatPaginatorModule,
-    MatDividerModule
+    MatPaginatorModule
   ],
   providers: [{ provide: MatPaginatorIntl, useClass: LabelsPaginator }],
   templateUrl: './list-people.component.html',
