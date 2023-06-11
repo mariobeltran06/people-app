@@ -1,0 +1,47 @@
+@use 'responsive' as *;
+@use 'colors' as *;
+
+.container-list {
+  padding-bottom: 50px;
+  margin: 50px auto;
+
+  mat-card{
+    box-shadow: none;
+    padding: 10px;
+
+    mat-card-header{
+        mat-card-title{
+            color: $primary;
+        }
+    }
+
+    mat-card-content{
+      margin: 20px 0;
+    }
+  }
+}
+
+@include sm {
+  .container-list {
+    width: 300px;
+  }
+}
+
+@include ml {
+  .container-list {
+    width: 350px;
+  }
+}
+
+@include tb {
+  .container-list {
+    width: 700px;
+  }
+}
+
+@include lg {
+  .container-list {
+    width: 1000px;
+  }
+}
+

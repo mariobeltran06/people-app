@@ -1,1 +1,14 @@
-<p>registered-persons works!</p>
+<div class="container-list">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><h3>Lista de Personas Registradas</h3></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-no-data-people
+        *ngIf="dataPeople.length === 0; else showData"></app-no-data-people>
+      <ng-template #showData>
+        <app-list-people [listPeople]="dataPeople"></app-list-people>
+      </ng-template>
+    </mat-card-content>
+  </mat-card>
+</div>
