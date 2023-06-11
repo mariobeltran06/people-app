@@ -1,0 +1,40 @@
+@use 'responsive' as *;
+@use 'colors' as *;
+
+.container-register {
+  padding-bottom: 50px;
+  margin: 20px auto;
+
+  mat-card{
+    box-shadow: none;
+    padding: 10px;
+
+    mat-card-header{
+        mat-card-title{
+            color: $primary;
+        }
+    }
+
+    mat-card-content{
+      margin: 20px 0;
+    }
+  }
+}
+
+@include sm {
+  .container-register {
+    width: 300px;
+  }
+}
+
+@include ml {
+  .container-register {
+    width: 350px;
+  }
+}
+
+@include tb {
+  .container-register {
+    width: 700px;
+  }
+}
