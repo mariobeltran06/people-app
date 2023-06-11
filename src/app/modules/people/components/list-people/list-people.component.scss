@@ -1,0 +1,76 @@
+@use 'responsive' as *;
+
+.container-table {
+  mat-form-field {
+    width: 100%;
+  }
+  table {
+    width: 100%;
+
+    .mat-cell-filter {
+      padding: 5px;
+    }
+  }
+}
+
+.section-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 5px 5px;
+  justify-content: flex-start;
+
+  .caption {
+    padding: 10px 0;
+  }
+
+  .text {
+    word-wrap: break-word;
+  }
+
+  .text:last-child {
+    padding-bottom: 10px;
+  }
+}
+
+@include sm {
+  .container-table {
+    display: none;
+  }
+
+  .section-responsive {
+    justify-content: center;
+    .card-content {
+      width: 100%;
+      border: 1px solid slategray;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  }
+}
+
+@include tb {
+  .container-table {
+    display: none;
+  }
+
+  .section-responsive {
+    justify-content: flex-start;
+    .card-content {
+      width: 200px;
+      border: 1px solid slategray;
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+}
+
+@include lg {
+  .container-table {
+    display: block;
+  }
+
+  .section-responsive {
+    display: none;
+  }
+}

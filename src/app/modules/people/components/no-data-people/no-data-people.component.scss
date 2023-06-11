@@ -1,0 +1,17 @@
+.container-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px 20px;
+
+  mat-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 64px;
+  }
+
+  h3 {
+    text-align: center;
+  }
+}
