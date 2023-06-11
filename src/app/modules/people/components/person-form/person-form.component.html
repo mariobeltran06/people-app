@@ -1,0 +1,121 @@
+<form [formGroup]="formPerson" (ngSubmit)="sendPerson()">
+  <div class="container-inputs">
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input
+          matInput
+          type="text"
+          #name
+          formControlName="name"
+          placeholder="Ej. Carlos"
+          minlength="3"
+          maxlength="40"
+          required />
+        <mat-error *ngIf="control('name').errors?.['required']">
+          El campo es requerido
+        </mat-error>
+        <mat-error *ngIf="control('name').errors?.['minlength']">
+          Mínimo 3 caracteres
+        </mat-error>
+        <mat-error *ngIf="control('name').errors?.['maxlength']">
+          Máximo 40 caracteres
+        </mat-error>
+        <mat-error *ngIf="control('name').errors?.['pattern']">
+          No contener espacios al inicio
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <mat-label>Apellido</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="last_name"
+          placeholder="Ej. Humberto"
+          minlength="3"
+          maxlength="40"
+          required />
+        <mat-error *ngIf="control('last_name').errors?.['required']">
+          El campo es requerido
+        </mat-error>
+        <mat-error *ngIf="control('last_name').errors?.['minlength']">
+          Mínimo 3 caracteres
+        </mat-error>
+        <mat-error *ngIf="control('last_name').errors?.['maxlength']">
+          Máximo 40 caracteres
+        </mat-error>
+        <mat-error *ngIf="control('last_name').errors?.['pattern']">
+          No contener espacios al inicio
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="container-inputs">
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <mat-label>Edad</mat-label>
+        <input
+          matInput
+          type="number"
+          formControlName="age"
+          value="18"
+          min="18"
+          max="120"
+          step="1"
+          required />
+        <mat-error *ngIf="control('age').errors?.['required']">
+          El campo es requerido
+        </mat-error>
+        <mat-error *ngIf="control('age').errors?.['min']">
+          La edad mínima es 18
+        </mat-error>
+        <mat-error *ngIf="control('age').errors?.['max']">
+          La edad máxima es 120
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field appearance="outline">
+        <mat-label>Correo electrónico</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="email"
+          placeholder="Ej. micorreo@dominio.com"
+          maxlength="150"
+          required />
+        <mat-error *ngIf="control('email').errors?.['required']">
+          El campo es requerido
+        </mat-error>
+        <mat-error *ngIf="control('email').errors?.['email']">
+          El correo es inválido, por favor siga el ejemplo
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="container-textarea">
+    <mat-form-field appearance="outline">
+      <mat-label>Dirección (opcional)</mat-label>
+      <textarea
+        matInput
+        #address
+        formControlName="address"
+        maxlength="150"
+        placeholder="Escriba su dirección..."></textarea>
+      <mat-hint align="end">{{ address.value.length }} / 150</mat-hint>
+      <mat-error *ngIf="control('address').errors?.['maxlength']">
+        Máximo 150 caracteres
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <button
+    mat-flat-button
+    class="submit"
+    color="accent"
+    type="submit"
+    [disabled]="formPerson.invalid">
+    Enviar
+  </button>
+</form>

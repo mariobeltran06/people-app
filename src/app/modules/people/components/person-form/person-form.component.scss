@@ -1,0 +1,62 @@
+@use 'responsive' as *;
+@use 'colors' as *;
+
+form {
+  .container-inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 0px 10px;
+
+    .input {
+      margin: 15px 0px;
+      width: 100%;
+      mat-form-field {
+        width: 100%;
+
+        mat-error{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .container-textarea {
+    margin: 15px 0px;
+    mat-form-field {
+      width: 100%;
+
+      textarea {
+        resize: none;
+        height: 70px;
+      }
+
+      mat-hint, mat-error{
+        font-size: 14px;
+      }
+    }
+  }
+
+  .submit {
+    margin-top: 15px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+
+    &:disabled{
+      color: gray;
+    }
+  }
+}
+
+@include sm{
+  .container-inputs{
+    flex-wrap: wrap;
+  }
+}
+
+@include tb{
+  .container-inputs{
+    flex-wrap: nowrap;
+  }
+}
