@@ -1,6 +1,36 @@
+@use 'responsive' as *;
+
 mat-toolbar {
+  padding: 0 5px;
   img {
+    margin: 0 5px;
     width: 300px;
     height: 50px;
+  }
+  .space-between {
+    flex: 1 1 auto;
+  }
+}
+
+@include sm {
+  mat-toolbar {
+    .item {
+      display: none;
+    }
+  }
+}
+
+@include tb {
+  mat-toolbar {
+    .item {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .item-menu{
+      display: none;
+    }
+    
   }
 }

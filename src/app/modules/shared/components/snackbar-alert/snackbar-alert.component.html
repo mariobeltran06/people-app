@@ -1,0 +1,13 @@
+<div class="snackbar-flex">
+  <div class="icon" [ngSwitch]="data.type">
+    <ng-container *ngSwitchCase="'success'">
+      <mat-icon [ngClass]="data.type">check_circle</mat-icon>
+    </ng-container>
+    <ng-container *ngSwitchCase="'error'">
+      <mat-icon [ngClass]="data.type">highlight_off</mat-icon>
+    </ng-container>
+  </div>
+  <div class="message">
+    <p>{{ data.message }}</p>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.snackbar-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px 10px;
+  align-items: center;
+
+  .icon {
+    mat-icon {
+      padding: 5px 0;
+      font-size: 24px;
+
+      &.success {
+        color: green;
+      }
+
+      &.error {
+        color: red;
+      }
+    }
+  }
+}
