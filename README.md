@@ -1,6 +1,10 @@
-# PeopleApp
+# People App - Blue Medical
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+
+## :globe_with_meridians: Hosting
+[Blue Medical - Click Here](https://blue-medical-people.netlify.app/)
+
 
 ## Development server
 
